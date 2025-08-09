@@ -17,13 +17,31 @@
         }
 
         header {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            gap: 20px;
             margin-bottom: 40px;
+            flex-wrap: wrap;
+            /* Permite quebrar linha no mobile */
+        }
+
+        header img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #2980b9;
+            flex-shrink: 0;
+        }
+
+        header div {
+            flex: 1 1 300px;
         }
 
         h1 {
             margin-bottom: 5px;
-            font-size: 2.5em;
+            font-size: 2.4em;
+            color: #050463;
         }
 
         h2 {
@@ -55,7 +73,24 @@
 
         .educacao {
             padding: 0px;
+        }
 
+        /* Responsividade */
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            header div {
+                flex: none;
+                width: 100%;
+            }
+
+            header img {
+                margin-bottom: 15px;
+            }
         }
     </style>
 </head>
@@ -63,12 +98,13 @@
 <body>
     <header>
         <img src="apel (1).jpeg" alt="">
-        <h1>Ruberlandio Oliveira da SIlva</h1>
-        <p class="contact">
-            <a href="ruberlandio.oliveira2@gmail.com">ruberlandio.oliveira2@gmail.com</a> |
-            <a href="https://github.com/RuberlandioOliveira" target="_blank" rel="noopener noreferrer">GitHub</a> |
-            <!-- <a href="https://linkedin.com/in/joaosilva" target="_blank" rel="noopener noreferrer">LinkedIn</a> -->
-        </p>
+        <div>
+            <h1>Ruberlandio Oliveira da Silva</h1>
+            <p class="contact">
+                <a href="mailto:ruberlandio.oliveira2@gmail.com">ruberlandio.oliveira2@gmail.com</a> |
+                <a href="https://github.com/RuberlandioOliveira" target="_blank" rel="noopener noreferrer">GitHub</a>
+            </p>
+        </div>
     </header>
 
     <section>
@@ -94,15 +130,13 @@
     <section>
         <h2>Educação</h2>
         <div>
-            <p>Tecnico em eletrônica Radio e Tv. - Instituto Universal Brasileiro. (1996 - 1998).<br>Tecnico em
-                Eletrônoca e Tv. - Escolca União. (2000 - 2001).<br>Tecnico em manutenção de fontes chaveadas. - Escola
-                Instructiva. (2015 - 2016).<br>Curso de Rede de Computadores. - Udemy. (2020 - 2021).<br> Curso TCP/IP. 
+            <p>Técnico em eletrônica Radio e Tv. - Instituto Universal Brasileiro. (1996 - 1998).<br>Técnico em
+                Eletrônica e Tv. - Escola União. (2000 - 2001).<br>Técnico em manutenção de fontes chaveadas. - Escola
+                Instructiva. (2015 - 2016).<br>Curso de Rede de Computadores. - Udemy. (2020 - 2021).<br> Curso TCP/IP.
                 - Udemy. (2021 - 2021).<br>Curso Front End. - Udemy. (2022 - 2023).<br>Curso HTML/CSS e JS. - DEV Club.
                 (2023 - 2024).<br>Curso Arduino. - Brincando com as Ideias" Prof. Flávio Guimarães". (2024 - 2024).</p>
-
         </div>
     </section>
 </body>
-
 
 </html>
